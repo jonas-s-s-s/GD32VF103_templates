@@ -8,7 +8,7 @@ ASFLAGS += -c
 ASFLAGS += -O0
 ASFLAGS += -Wall
 ASFLAGS += -fmessage-length=0
-ASFLAGS += -march=rv32imac
+ASFLAGS += -march=rv32imac_zicsr
 ASFLAGS += -mabi=ilp32
 ASFLAGS += -mcmodel=medlow
 
@@ -19,20 +19,20 @@ CFLAGS += -O0
 CFLAGS += -g
 CFLAGS += -fmessage-length=0
 CFLAGS += --specs=nosys.specs
-CFLAGS += -march=rv32imac
+CFLAGS += -march=rv32imac_zicsr
 CFLAGS += -mabi=ilp32
 CFLAGS += -mcmodel=medlow
 
 # Linker directives.
 LFLAGS += -Wall
 LFLAGS += -Wl,--no-relax
-LFLAGS += -Wl,--gc-sections
+#LFLAGS += -Wl,--gc-sections # CAUSES ERROR?
 LFLAGS += -nostdlib
 LFLAGS += -nostartfiles
 LFLAGS += -lc
 LFLAGS += -lgcc
 LFLAGS += --specs=nosys.specs
-LFLAGS += -march=rv32imac
+LFLAGS += -march=rv32imac_zicsr
 LFLAGS += -mabi=ilp32
 LFLAGS += -mcmodel=medlow
 LFLAGS += -T./../common/gd32vf103xb.ld

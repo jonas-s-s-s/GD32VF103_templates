@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "gd32vf103.h": "c",
+        "type_traits": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}

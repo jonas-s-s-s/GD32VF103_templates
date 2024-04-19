@@ -229,8 +229,8 @@ vtable:
   .set  CAN1_EWMC_IRQn_handler,default_interrupt_handler
   .weak USB_IRQn_handler
   .set  USB_IRQn_handler,default_interrupt_handler
-
-/*
+  
+ /*
  * A 'default' interrupt handler, in case an interrupt triggers
  * without a handler being defined.
  */
